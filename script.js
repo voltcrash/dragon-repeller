@@ -265,17 +265,31 @@ function pick(guess) {
     }
 }
 
-const darkColorsArr = ["#2C3E50", "#34495E", "#2C2C2C", "#616A6B", "#4A235A", "#2F4F4F", "#0E4B5A", "#36454F", "#2C3E50", "#800020", "#000000", "#ffffff"];
+// UI
+document.addEventListener("DOMContentLoaded", function () {
+    const body = document.body;
+    const game = document.getElementById("game");
+    const stats = document.getElementById("stats");
+    const controls = document.getElementById("controls");
+    const checkbox = document.querySelector(".checkbox-wrapper-25 input[type='checkbox']");
 
-function getRandomIndex() {
-    return Math.floor(darkColorsArr.length * Math.random());
-}
+    checkbox.addEventListener("change", function () {
+        body.classList.toggle("modern-body", this.checked);
+        body.classList.toggle("retro-body", !this.checked);
 
-const body = document.querySelector("body");
+        game.classList.toggle("modern-game", this.checked);
+        game.classList.toggle("retro-game", !this.checked);
 
-function changeBackgroundColor() {
-    body.style.backgroundColor = darkColorsArr[getRandomIndex()];
-}
+        stats.classList.toggle("modern-stats", this.checked);
+        stats.classList.toggle("retro-stats", !this.checked);
 
-const btn = document.querySelector("#button4");
-btn.onclick = changeBackgroundColor;
+        controls.classList.toggle("modern-controls", this.checked);
+        controls.classList.toggle("retro-controls", !this.checked);
+
+        monsterStats.classList.toggle("modern-monster-stats", this.checked);
+        monsterStats.classList.toggle("retro-monster-stats", !this.checked);
+
+        text.classList.toggle("modern-text", this.checked);
+        text.classList.toggle("retro-text", !this.checked);
+    });
+});
