@@ -267,33 +267,22 @@ function pick(guess) {
 
 // UI
 document.addEventListener("DOMContentLoaded", function () {
-    const p = document.getElementsByTagName("p")[0];
-    const body = document.body;
-    const game = document.getElementById("game");
-    const stats = document.getElementById("stats");
-    const controls = document.getElementById("controls");
     const checkbox = document.querySelector(".checkbox-wrapper-25 input[type='checkbox']");
+    const lookToggle = document.getElementById("look-style");
+    // const themeLink = document.getElementById("theme-style");
 
-    checkbox.addEventListener("change", function () {
-        p.classList.toggle("modern-header", this.checked);
-        p.classList.toggle("retro-header", !this.checked);
-        
-        body.classList.toggle("modern-body", this.checked);
-        body.classList.toggle("retro-body", !this.checked);
+        if(localStorage.getItem("look") === "modern") {
+            lookToggle.href = "./assets/css/modern.css";
+            checkbox.checked = true;
+        }
 
-        game.classList.toggle("modern-game", this.checked);
-        game.classList.toggle("retro-game", !this.checked);
-
-        stats.classList.toggle("modern-stats", this.checked);
-        stats.classList.toggle("retro-stats", !this.checked);
-
-        controls.classList.toggle("modern-controls", this.checked);
-        controls.classList.toggle("retro-controls", !this.checked);
-
-        monsterStats.classList.toggle("modern-monster-stats", this.checked);
-        monsterStats.classList.toggle("retro-monster-stats", !this.checked);
-
-        text.classList.toggle("modern-text", this.checked);
-        text.classList.toggle("retro-text", !this.checked);
-    });
+        checkbox.addEventListener("change", function () {
+            if (this.checked) {
+                lookToggle.href = "./assets/css/modern.css";
+                localStorage.setItem("look", "modern");
+            } else {
+                lookToggle.href = "./assets/css/retro.css";
+                localStorage.setItem("look", "retro");
+            }
+        });
 });

@@ -2,35 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="styles.css">
-    <title>RPG - Dragon Repeller</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon/favicon.ico">
+    <link id="look-style" rel="stylesheet" href="assets/css/retro.css">
+    <link rel="stylesheet" href="assets/css/switcher.css">
+    <title>Dragon Repeller</title>
 </head>
-<body class="retro-body">
+<body class="body">
 
 <header>
-    <p class="retro-header">Dragon Repeller</p>
+    <div class="header">
+        <p>Dragon Repeller</p>
+        <img id="theme-toggle" src="assets/images/fire-dragon.png" alt="light-mode theme toggle image">
+    </div>
+
 
     <div class="checkbox-wrapper-25">
         <input type="checkbox">
     </div>
 </header>
 
-<div id="game" class="retro-game">
-    <div id="stats" class="retro-stats">
+<div id="game" class="game">
+    <div id="stats" class="stats">
         <span class="stat">XP: <strong><span id="xpText">0</span></strong></span>
         <span class="stat">Health: <strong><span id="healthText">100</span></strong></span>
         <span class="stat">Gold: <strong><span id="goldText">50</span></strong></span>
     </div>
-    <div id="controls" class="retro-controls">
+    <div id="controls" class="controls">
         <button id="button1">Go to store</button>
         <button id="button2">Go to cave</button>
         <button id="button3">Fight dragon</button>
     </div>
-    <div id="monsterStats" class="retro-monster-stats">
+    <div id="monsterStats" class="monster-stats">
         <span class="stat">Monster Name: <strong><span id="monsterName"></span></strong></span>
         <span class="stat">Health: <strong><span id="monsterHealth"></span></strong></span>
     </div>
-    <div id="text" class="retro-text">
+    <div id="text" class="text">
         Welcome to Dragon Repeller. You must defeat the dragon that is preventing people from leaving the town. You are
         in the town square. Where do you want to go? Use the buttons above.
     </div>
