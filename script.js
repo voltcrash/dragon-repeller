@@ -267,6 +267,7 @@ function pick(guess) {
 
 // UI
 document.addEventListener("DOMContentLoaded", function () {
+    const p = document.getElementsByTagName("p")[0];
     const body = document.body;
     const game = document.getElementById("game");
     const stats = document.getElementById("stats");
@@ -274,6 +275,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const checkbox = document.querySelector(".checkbox-wrapper-25 input[type='checkbox']");
 
     checkbox.addEventListener("change", function () {
+        p.classList.toggle("modern-header", this.checked);
+        p.classList.toggle("retro-header", !this.checked);
+        
         body.classList.toggle("modern-body", this.checked);
         body.classList.toggle("retro-body", !this.checked);
 
