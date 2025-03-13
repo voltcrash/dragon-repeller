@@ -12,6 +12,25 @@
     font-style: normal;
 }
 
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.retro-header {
+    visibility: hidden;
+    font-style: italic;
+    font-size: 2.2rem;
+}
+
+.modern-header {
+    font-style: italic;
+    font-size: 2.2rem;
+    margin-left: 20px;
+}
+
 .retro-body {
     background-color: grey;
     height: 100vh;
@@ -20,7 +39,7 @@
 }
 
 .modern-body{
-    background-color: grey;
+    background-color: white;
     height: 100vh;
     overflow: hidden;
     font-family: 'Audiowide', sans-serif;
@@ -29,7 +48,7 @@
 .retro-text {
     background-color: black;
     color: #ffffff;
-    padding: 10px;
+    padding: 1rem;
 }
 
 .modern-text {
@@ -86,13 +105,14 @@ button {
 
 /*Design Switcher*/
 .checkbox-wrapper-25 {
-    margin-top: 20px
+    display: flex;
+    margin-right: 20px;
 }
 
 .checkbox-wrapper-25 input {
+    width: min-content;
     display: flex;
     margin-left: auto;
-    margin-right: 20px;
 }
 
 .checkbox-wrapper-25 input[type="checkbox"] {
