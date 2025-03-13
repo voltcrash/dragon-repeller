@@ -1,0 +1,75 @@
+@font-face {
+    font-family: 'Audiowide';
+    src: url('../fonts/Audiowide/Audiowide-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-style: italic;
+    font-size: 2.2rem;
+    margin-left: 20px;
+}
+
+
+.body{
+    background-color: white;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Audiowide', sans-serif;
+}
+
+.text {
+    color: black;
+}
+
+.game {
+    color: #fff;
+}
+
+.controls, .stats {
+    color: black;
+    padding: 5px;
+}
+
+.monster-stats {
+    display: none;
+    padding: 5px;
+    color: #ffffff;
+    background-color: #c70d0d;
+}
+
+.stat {
+    padding-right: 10px;
+}
+
+button {
+    cursor: pointer;
+    color: #0a0a23;
+    background-color: #feac32;
+    background-image: linear-gradient(#fecc4c, #ffac33);
+    border: 3px solid #feac32;
+}
+
+#button4 {
+    margin-left: 225px;
+    background-color: #32fea9;
+    background-image: linear-gradient(#4cfecf, #33e0ff);
+    border: 3px solid #32fef7;
+    border-radius: 100px;
+}
