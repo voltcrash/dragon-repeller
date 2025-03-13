@@ -1,13 +1,6 @@
 @font-face {
-    font-family: 'Audiowide';
-    src: url('assets/fonts/Audiowide/Audiowide-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
     font-family: 'Tektur';
-    src: url('assets/fonts/Tektur/Tektur-VariableFont.ttf') format("truetype");
+    src: url('../fonts/Tektur/Tektur-VariableFont.ttf') format("truetype");
     font-weight: normal;
     font-style: normal;
 }
@@ -24,7 +17,7 @@ header {
     width: 100%;
 }
 
-.retro-header {
+.header {
     visibility: hidden;
     display: flex;
     align-items: center;
@@ -33,20 +26,20 @@ header {
     font-size: 2.2rem;
 }
 
-.retro-body {
+.body {
     background-color: grey;
     height: 100vh;
     overflow: hidden;
     font-family: 'Tektur', sans-serif;
 }
 
-.retro-text {
+.text {
     background-color: black;
     color: #ffffff;
     padding: 1rem;
 }
 
-.retro-game {
+.game {
     max-width: 500px;
     max-height: 400px;
     background-color: #ffffff;
@@ -56,13 +49,13 @@ header {
     box-sizing: border-box;
 }
 
-.retro-controls, .retro-stats {
+.controls, .stats {
     border: 1px solid black;
     color: black;
     padding: 5px;
 }
 
-.retro-monster-stats {
+.monster-stats {
     display: none;
     border: 1px solid black;
     padding: 5px;
