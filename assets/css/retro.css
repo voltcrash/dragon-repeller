@@ -17,7 +17,7 @@ header {
     width: 100%;
 }
 
-.header {
+.header-left {
     visibility: hidden;
     display: flex;
     align-items: center;
@@ -27,7 +27,7 @@ header {
 }
 
 .body {
-    background-color: grey;
+    background-color: #1A0B0C;
     height: 100vh;
     overflow: hidden;
     font-family: 'Tektur', sans-serif;
@@ -35,15 +35,15 @@ header {
 
 .text {
     background-color: black;
-    color: #ffffff;
+    color: navajowhite;
     padding: 1rem;
 }
 
 .game {
     max-width: 500px;
     max-height: 400px;
-    background-color: #ffffff;
-    color: #ffffff;
+    background-image: linear-gradient(#fecc4c, #E2A628);
+    border-radius: 0.5rem;
     margin: 30px auto 0 auto;
     padding: 10px;
     box-sizing: border-box;
@@ -53,14 +53,19 @@ header {
     border: 1px solid black;
     color: black;
     padding: 5px;
+    border-radius: 0.1rem;
+}
+
+.stats {
+    border-bottom: none;
 }
 
 .monster-stats {
     display: none;
     border: 1px solid black;
     padding: 5px;
-    color: #ffffff;
-    background-color: #c70d0d;
+    color: #0F0506;
+    background-color: #FF3A32;
 }
 
 .stat {
@@ -69,16 +74,9 @@ header {
 
 button {
     cursor: pointer;
-    color: #0a0a23;
-    background-color: #feac32;
-    background-image: linear-gradient(#fecc4c, #ffac33);
-    border: 3px solid #feac32;
-}
-
-#button4 {
-    margin-left: 225px;
-    background-color: #32fea9;
-    background-image: linear-gradient(#4cfecf, #33e0ff);
-    border: 3px solid #32fef7;
-    border-radius: 100px;
+    color: #42310d;
+    background-color: #FF3A32;
+    background-image: linear-gradient(#FF3A32, rgb(255, 50, 105));
+    border: 3px solid #FF3A32;
+    border-radius: 0.2rem;
 }

@@ -269,20 +269,40 @@ function pick(guess) {
 document.addEventListener("DOMContentLoaded", function () {
     const checkbox = document.querySelector(".checkbox-wrapper-25 input[type='checkbox']");
     const lookToggle = document.getElementById("look-style");
-    // const themeLink = document.getElementById("theme-style");
+    const themeToggle = document.getElementById("theme-toggle");
 
-        if(localStorage.getItem("look") === "modern") {
+    if (localStorage.getItem("look") === "modern") {
+        lookToggle.href = "./assets/css/modern.css";
+        checkbox.checked = true;
+    }
+    
+    if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("body-dark");
+        themeToggle.src = "./assets/images/fire-dragon.png";
+    } else if (localStorage.getItem("theme") === "light") {
+        themeToggle.src = "./assets/images/dragon.png";
+    }
+
+    checkbox.addEventListener("change", function () {
+        if (this.checked) {
             lookToggle.href = "./assets/css/modern.css";
-            checkbox.checked = true;
+            localStorage.setItem("look", "modern");
+        } else {
+            lookToggle.href = "./assets/css/retro.css";
+            localStorage.setItem("look", "retro");
         }
+    });
 
-        checkbox.addEventListener("change", function () {
-            if (this.checked) {
-                lookToggle.href = "./assets/css/modern.css";
-                localStorage.setItem("look", "modern");
-            } else {
-                lookToggle.href = "./assets/css/retro.css";
-                localStorage.setItem("look", "retro");
-            }
-        });
+    // Theme toggle event (image click)
+    themeToggle.addEventListener("click", function () {
+        if (document.body.classList.contains("body-dark")) {
+            document.body.classList.remove("body-dark");
+            themeToggle.src = "./assets/images/dragon.png";
+            localStorage.setItem("theme", "light");
+        } else {
+            document.body.classList.add("body-dark");
+            themeToggle.src = "./assets/images/fire-dragon.png";
+            localStorage.setItem("theme", "dark");
+        }
+    });
 });

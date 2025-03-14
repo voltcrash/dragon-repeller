@@ -17,7 +17,7 @@ header {
     width: 100%;
 }
 
-.header {
+.header-left {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -34,8 +34,13 @@ header {
     font-family: 'Audiowide', sans-serif;
 }
 
+.body-dark {
+    background-color: #1A0B0C;
+    color: #E2A628;
+}
+
 .text {
-    color: black;
+    color: #E2A628;
 }
 
 .game {
@@ -58,7 +63,7 @@ header {
     padding-right: 10px;
 }
 
-button {
+.buttons {
     cursor: pointer;
     color: #0a0a23;
     background-color: #feac32;
@@ -66,10 +71,16 @@ button {
     border: 3px solid #feac32;
 }
 
-#button4 {
-    margin-left: 225px;
-    background-color: #32fea9;
-    background-image: linear-gradient(#4cfecf, #33e0ff);
-    border: 3px solid #32fef7;
-    border-radius: 100px;
+/*button.buttons-dark {
+
 }
+*/
+
+
+/*#button4 {*/
+/*    margin-left: 225px;*/
+/*    background-color: #32fea9;*/
+/*    background-image: linear-gradient(#4cfecf, #33e0ff);*/
+/*    border: 3px solid #32fef7;*/
+/*    border-radius: 100px;*/
+/*}*/
