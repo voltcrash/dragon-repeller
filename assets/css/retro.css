@@ -3,6 +3,7 @@
     src: url('../fonts/Tektur/Tektur-VariableFont.ttf') format("truetype");
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 img {
