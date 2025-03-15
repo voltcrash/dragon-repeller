@@ -1,13 +1,10 @@
 <div align="center">  
 
 <p align="center">
-  <a href="https://dragon-repeller.pages.dev">
-    <img src="https://dragon-repeller.pages.dev/assets/images/thumbnails/experimental.png" 
-         alt="app-logo">
-  </a>
+    <img src="assets/images/thumbnails/transparent.png" width="600">
 </p>
 
-<p align="center"><em>A simple text-based RPG</em></p>  
+<a href="https://dragon-repeller.pages.dev"><em>A simple text-based RPG</em></a>
 
 </div>  
   
