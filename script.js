@@ -270,7 +270,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const checkbox = document.querySelector(".checkbox-wrapper-25 input[type='checkbox']");
     const lookToggle = document.getElementById("look-style");
     const themeToggle = document.getElementById("theme-toggle");
-
+    const sources = themeToggle.closest("picture").querySelectorAll("source");
     if (localStorage.getItem("look") === "modern") {
         lookToggle.href = "./assets/css/modern.css";
         checkbox.checked = true;
@@ -297,11 +297,15 @@ document.addEventListener("DOMContentLoaded", function () {
     themeToggle.addEventListener("click", function () {
         if (document.body.classList.contains("body-dark")) {
             document.body.classList.remove("body-dark");
-            themeToggle.src = "./assets/images/dragon.png";
+            sources[0].srcset = "./assets/images/logo/light/dragon.avif";
+            sources[1].srcset = "./assets/images/logo/light/dragon.webp";
+            themeToggle.src = "./assets/images/logo/light/dragon.png";
             localStorage.setItem("theme", "light");
         } else {
             document.body.classList.add("body-dark");
-            themeToggle.src = "./assets/images/fire-dragon.png";
+            sources[0].srcset = "./assets/images/logo/dark/fire-dragon.avif";
+            sources[1].srcset = "./assets/images/logo/dark/fire-dragon.webp"
+            themeToggle.src = "./assets/images/logo/dark/fire-dragon.png";
             localStorage.setItem("theme", "dark");
         }
     });
