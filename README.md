@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://dragon-repeller.pages.dev">
-    <img src="https://dragon-repeller.pages.dev/assets/images/thumbnails/og-image-2400x1260.png" 
+    <img src="https://dragon-repeller.pages.dev/assets/images/thumbnails/experimental.png" 
          alt="app-logo">
   </a>
 </p>
