@@ -112,7 +112,8 @@ h1 {
 
 .buttons {
     background: #FF3A32 linear-gradient(#FF3A32, rgb(255, 50, 105));
-    border: 3px solid #FF3A32;
+    box-shadow: 0 0 10px rgb(226, 166, 40);
+    border: 0 solid #FF3A32;
     border-radius: 50px;
     color: #0a0a23;
     padding: 10px;
