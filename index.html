@@ -9,11 +9,13 @@
     <meta property="og:title" content="Dragon Repeller"/>
     <meta property="og:description"
           content="Defeat the dragon in this simple text-based RPG and save the town!"/>
-    <meta property="og:image" content="https://dragon-repeller.pages.dev/assets/images/thumbnails/og-image-2400x1260.avif"/>
+    <meta property="og:image"
+          content="https://dragon-repeller.pages.dev/assets/images/thumbnails/og-image-2400x1260.avif"/>
     <meta property="og:image:width" content="2400"/>
     <meta property="og:image:height" content="1260"/>
     <meta property="og:image:alt" content="Dragon Repeller - Defeat the dragon and save the town!"/>
-    <meta property="og:image" content="https://dragon-repeller.pages.dev/assets/images/thumbnails/og-image-1080x1080.avif"/>
+    <meta property="og:image"
+          content="https://dragon-repeller.pages.dev/assets/images/thumbnails/og-image-1080x1080.avif"/>
     <meta property="og:image:width" content="1080"/>
     <meta property="og:image:height" content="1080"/>
     <meta property="og:url" content="https://dragon-repeller.pages.dev"/>
@@ -81,7 +83,7 @@
     <div class="header-left">
         <a href="https://dragon-repeller.pages.dev">Dragon Repeller</a>
         <picture>
-            <source srcset="assets/images/logo/dark/fire-dragon.avif" >
+            <source srcset="assets/images/logo/dark/fire-dragon.avif">
             <source srcset="assets/images/logo/dark/fire-dragon.webp">
             <img id="theme-toggle" src="assets/images/logo/dark/fire-dragon.png" alt="Dragon Repeller game logo">
         </picture>
@@ -104,19 +106,26 @@
         <img src="assets/images/game/coin.avif" class="icon" alt="coin-icon">
         <span class="stat">Gold - <strong><span id="goldText">50</span></strong></span>
     </div>
-    <div id="controls" class="controls">
-        <button id="button1" class="buttons" aria-label="Go to store">Go to store</button>
-        <button id="button2" class="buttons" aria-label="Go to cave">Go to cave</button>
-        <button id="button3" class="buttons" aria-label= "Fight Dragon">Fight dragon</button>
-    </div>
     <div id="monsterStats" class="monster-stats">
-        <span class="stat">Monster Name: <strong><span id="monsterName"></span></strong></span>
-        <span class="stat">Health: <strong><span id="monsterHealth"></span></strong></span>
+        <div class="innerMonster">
+            <div class="monster-section">
+                <span class="stat">Monster Name: <strong><span id="monsterName"></span></strong></span>
+            </div>
+            <div class="monster-section">
+                <span class="stat">Health: <strong><span id="monsterHealth"></span></strong></span>
+            </div>
+        </div>
     </div>
     <div id="text" class="text">
         Welcome to Dragon Repeller. You must defeat the dragon that is preventing people from leaving the town. You are
-        in the town square. Where do you want to go? Use the buttons above.
+        in the town square. Where do you want to go? Use the buttons below.
     </div>
+    <div id="controls" class="controls">
+        <button id="button1" class="buttons" aria-label="Go to store">Go to store</button>
+        <button id="button2" class="buttons" aria-label="Go to cave">Go to cave</button>
+        <button id="button3" class="buttons" aria-label="Fight Dragon">Fight dragon</button>
+    </div>
+
 </div>
 
 <script src="script.js"></script>

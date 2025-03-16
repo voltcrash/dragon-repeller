@@ -27,7 +27,7 @@ header {
     align-items: center;
     gap: 10px;
     font-style: italic;
-    font-size: 2.2rem;
+    font-size: 2.3rem;
     margin-left: 20px;
 }
 
@@ -55,16 +55,14 @@ header {
 }
 
 .game {
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 20px;
+    font-size: 1.3rem;
     /*color: #fff;*/
 }
-
-/*.text {*/
-/*    color: #1A0B0C;*/
-/*}*/
-
 
 .icon {
     width: 30px;
@@ -75,26 +73,68 @@ header {
     padding: 5px;
 }
 
+.stats {
+    background-image: linear-gradient(#3c3b3b, #4e3535);
+    border-radius: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    margin-bottom: 30px;
+    font-size: 1.4rem;
+}
+
 .stat {
     margin-right: 20px;
 }
 
-
+.text {
+    max-width: 1000px;
+    text-align: center;
+}
 
 .monster-stats {
     display: none;
-    padding: 5px;
-    color: #ffffff;
-    background-color: #c70d0d;
+    color: #0F0506;
+    margin-top: -35px;
+    margin-bottom: 35px;
+}
+
+.innerMonster {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.monster-section {
+    background: conic-gradient(from 135deg, #E2A628, rgb(255, 50, 105));
+    padding: 5px 5px 5px 15px;
+    border-radius: 10px;
+}
+
+.monster-section:nth-child(2) {
+    background: conic-gradient(from 45deg, #E2A628, rgb(255, 50, 105));
+}
+
+.controls {
+    display: flex;
+    gap: 30px;
 }
 
 .buttons {
     cursor: pointer;
     color: #0a0a23;
-    background-color: #feac32;
-    background-image: linear-gradient(#fecc4c, #ffac33);
-    border: 3px solid #feac32;
+    background: #FF3A32 linear-gradient(#FF3A32, rgb(255, 50, 105));
+    border: 3px solid #FF3A32;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    padding: 10px;
+    transition: opacity 0.3s ease;
 }
+
+.buttons:hover {
+    opacity: 0.8;
+}
+
+
 
 .buttons-dark {
 

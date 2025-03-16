@@ -60,6 +60,10 @@ header {
     border-radius: 0.1rem;
 }
 
+.icon {
+    display: none;
+}
+
 .stats {
     border-bottom: none;
 }
@@ -78,7 +82,8 @@ header {
 
 button {
     cursor: pointer;
-    color: #42310d;
+    color: black;
+    font-weight: bold;
     background-color: #FF3A32;
     background-image: linear-gradient(#FF3A32, rgb(255, 50, 105));
     border: 3px solid #FF3A32;
