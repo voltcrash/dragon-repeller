@@ -6,6 +6,8 @@
     <title>Dragon Repeller</title>
     <meta name="description"
           content="A simple text-based RPG. Your task? - defeat the dragon that is preventing people from leaving the town!"/>
+
+    <!-- SEO -->
     <meta name="google-site-verification" content="qjCmfLQmDfmCnl5bFR36dBh0MtMyZA7MgqknJq4cVKg"/>
     <meta property="og:title" content="Dragon Repeller"/>
     <meta property="og:description"
@@ -23,8 +25,19 @@
     <meta property="og:type" content="website"/>
     <meta property="og:site_name" content="Dragon Repeller"/>
     <meta property="og:locale" content="en_US"/>
+    <meta name="theme-color" content="#1A0B0C">
+
+    <!-- Favicons -->
     <link rel="icon" type="image/x-icon" href="assets/images/favicon/favicon.ico">
-    <link id="look-style" rel="stylesheet" href="assets/css/retro.css">
+    <link rel="icon" href="assets/images/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/images/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/images/favicon/android-chrome-512x512.png">
+    <link rel="manifest" href="assets/images/favicon/site.webmanifest">
+
+    <!-- Styles -->
     <style>
         .loader-container {
             position: fixed;
@@ -53,11 +66,10 @@
             content: "";
             grid-area: 1/1;
             --c: no-repeat radial-gradient(farthest-side, #E2A628 92%, #0000);
-            background:
-                    var(--c) 50% 0,
-                    var(--c) 50% 100%,
-                    var(--c) 100% 50%,
-                    var(--c) 0 50%;
+            background: var(--c) 50% 0,
+            var(--c) 50% 100%,
+            var(--c) 100% 50%,
+            var(--c) 0 50%;
             background-size: 12px 12px;
             animation: l12 0.5s infinite;
         }
@@ -135,6 +147,7 @@
             padding-right: 0;
         }
     </style>
+    <link id="look-style" rel="stylesheet" as="style" href="assets/css/retro.css">
 </head>
 <body>
 
@@ -149,6 +162,7 @@
         <div class="header-left">
             <h1><a href="https://dragon-repeller.pages.dev">Dragon Repeller</a></h1>
             <picture>
+                <source srcset="assets/images/logo/fire-dragon.svg">
                 <source srcset="assets/images/logo/fire-dragon.avif">
                 <source srcset="assets/images/logo/fire-dragon.webp">
                 <img src="assets/images/logo/fire-dragon.png" class="logo" alt="Dragon Repeller game logo">
@@ -165,11 +179,26 @@
 
     <div id="game" class="game">
         <div id="stats" class="stats">
-            <img src="assets/images/game/star.avif" class="icon" alt="xp-icon">
+            <picture>
+                <source srcset="assets/images/game/star/star.svg">
+                <source srcset="assets/images/game/star/star.avif">
+                <source srcset="assets/images/game/star/star.webp">
+                <img src="assets/images/game/star/star.png" class="icon" alt="xp-icon" width="30px" height="28px">
+            </picture>
             <span class="stat">XP -  <strong><span id="xpText">0</span></strong></span>
-            <img src="assets/images/game/heart.avif" class="icon" alt="heart-icon">
+            <picture>
+                <source srcset="assets/images/game/heart/heart.svg">
+                <source srcset="assets/images/game/heart/heart.avif">
+                <source srcset="assets/images/game/heart/heart.webp">
+                <img src="assets/images/game/heart/heart.png" class="icon" alt="xp-icon" width="30px" height="26px">
+            </picture>
             <span class="stat">Health -  <strong><span id="healthText">100</span></strong></span>
-            <img src="assets/images/game/coin.avif" class="icon" alt="coin-icon">
+            <picture>
+                <source srcset="assets/images/game/coin/coin.svg">
+                <source srcset="assets/images/game/coin/coin.avif">
+                <source srcset="assets/images/game/coin/coin.webp">
+                <img src="assets/images/game/coin/coin.png" class="icon" alt="xp-icon" width="30px" height="29px">
+            </picture>
             <span class="stat">Gold - <strong><span id="goldText">50</span></strong></span>
         </div>
         <div id="monsterStats" class="monster-stats">

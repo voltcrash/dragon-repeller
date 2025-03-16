@@ -295,7 +295,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     checkbox.addEventListener("change", function() {
         content.style.opacity = "0";
-
         loaderContainer.style.visibility = "visible";
         loaderContainer.style.opacity = "1";
 
