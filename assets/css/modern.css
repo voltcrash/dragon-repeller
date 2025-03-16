@@ -10,7 +10,14 @@
     font-family: 'Audiowide', sans-serif;
 }
 
-#theme-toggle {
+body {
+    background-color: #1A0B0C;
+    color: #E2A628;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.logo {
     width: 100px;
     height: 100px;
 }
@@ -25,17 +32,13 @@ header {
 .header-left {
     display: flex;
     align-items: center;
-    gap: 10px;
-    font-style: italic;
-    font-size: 2.3rem;
     margin-left: 20px;
+    gap: 10px;
+    font-size: 2.3rem;
+    font-style: italic;
 }
 
-.header-left a {
-    text-decoration: none;
-    color: inherit;
-}
-
+.header-left a,
 .header-left a:visited,
 .header-left a:hover,
 .header-left a:active {
@@ -43,25 +46,13 @@ header {
     text-decoration: none;
 }
 
-.body{
-    background-color: white;
-    height: 100vh;
-    overflow: hidden;
-}
-
-.body-dark {
-    background-color: #1A0B0C;
-    color: #E2A628;
-}
-
 .game {
-    margin-top: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 30px;
     gap: 20px;
     font-size: 1.3rem;
-    /*color: #fff;*/
 }
 
 .icon {
@@ -69,16 +60,11 @@ header {
     margin-bottom: -5px;
 }
 
-.controls, .stats {
-    padding: 5px;
-}
-
 .stats {
-    background-image: linear-gradient(#3c3b3b, #4e3535);
+    background-image: linear-gradient(135deg, #3c3b3b, #4e4a35, #4e3535);
     border-radius: 10px;
-    padding-bottom: 10px;
-    padding-left: 20px;
     margin-bottom: 30px;
+    padding: 5px 5px 10px 20px;
     font-size: 1.4rem;
 }
 
@@ -86,16 +72,11 @@ header {
     margin-right: 20px;
 }
 
-.text {
-    max-width: 1000px;
-    text-align: center;
-}
-
 .monster-stats {
     display: none;
-    color: #0F0506;
     margin-top: -35px;
     margin-bottom: 35px;
+    color: #0F0506;
 }
 
 .innerMonster {
@@ -106,45 +87,36 @@ header {
 
 .monster-section {
     background: conic-gradient(from 135deg, #E2A628, rgb(255, 50, 105));
-    padding: 5px 5px 5px 15px;
     border-radius: 10px;
+    padding: 5px 5px 5px 15px;
 }
 
 .monster-section:nth-child(2) {
     background: conic-gradient(from 45deg, #E2A628, rgb(255, 50, 105));
 }
 
+.text {
+    max-width: 1000px;
+    text-align: center;
+}
+
 .controls {
     display: flex;
+    padding: 5px;
     gap: 30px;
 }
 
 .buttons {
-    cursor: pointer;
-    color: #0a0a23;
     background: #FF3A32 linear-gradient(#FF3A32, rgb(255, 50, 105));
     border: 3px solid #FF3A32;
     border-radius: 50px;
-    font-size: 1.2rem;
+    color: #0a0a23;
     padding: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
     transition: opacity 0.3s ease;
 }
 
 .buttons:hover {
     opacity: 0.8;
 }
-
-
-
-.buttons-dark {
-
-}
-
-
-/*#button4 {*/
-/*    margin-left: 225px;*/
-/*    background-color: #32fea9;*/
-/*    background-image: linear-gradient(#4cfecf, #33e0ff);*/
-/*    border: 3px solid #32fef7;*/
-/*    border-radius: 100px;*/
-/*}*/
