@@ -31,10 +31,15 @@ header {
 .header-left {
     align-items: center;
     display: flex;
-    font-size: 2.2rem;
+    font-size: 2.3rem;
     font-style: italic;
     gap: 10px;
     visibility: hidden;
+}
+
+h1 {
+    font-size: 2.3rem;
+    font-weight: normal;
 }
 
 .text {
