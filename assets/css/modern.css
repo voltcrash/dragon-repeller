@@ -6,7 +6,11 @@
     font-display: swap;
 }
 
-img {
+* {
+    font-family: 'Audiowide', sans-serif;
+}
+
+#theme-toggle {
     width: 100px;
     height: 100px;
 }
@@ -43,7 +47,6 @@ header {
     background-color: white;
     height: 100vh;
     overflow: hidden;
-    font-family: 'Audiowide', sans-serif;
 }
 
 .body-dark {
@@ -51,28 +54,38 @@ header {
     color: #E2A628;
 }
 
-.text {
-    color: #E2A628;
+.game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*color: #fff;*/
 }
 
-.game {
-    color: #fff;
+/*.text {*/
+/*    color: #1A0B0C;*/
+/*}*/
+
+
+.icon {
+    width: 30px;
+    margin-bottom: -5px;
 }
 
 .controls, .stats {
-    color: black;
     padding: 5px;
 }
+
+.stat {
+    margin-right: 20px;
+}
+
+
 
 .monster-stats {
     display: none;
     padding: 5px;
     color: #ffffff;
     background-color: #c70d0d;
-}
-
-.stat {
-    padding-right: 10px;
 }
 
 .buttons {
@@ -83,10 +96,9 @@ header {
     border: 3px solid #feac32;
 }
 
-/*button.buttons-dark {
+.buttons-dark {
 
 }
-*/
 
 
 /*#button4 {*/
