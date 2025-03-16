@@ -10,70 +10,85 @@
     font-family: 'Tektur', sans-serif;
 }
 
+body {
+    background-color: #1A0B0C;
+    height: 100vh;
+    overflow: hidden;
+}
+
 img {
-    width: 100px;
     height: 100px;
+    width: 100px;
 }
 
 header {
-    display: flex;
     align-items: center;
+    display: flex;
     justify-content: space-between;
     width: 100%;
 }
 
 .header-left {
-    visibility: hidden;
-    display: flex;
     align-items: center;
-    gap: 10px;
-    font-style: italic;
+    display: flex;
     font-size: 2.2rem;
-}
-
-.body {
-    background-color: #1A0B0C;
-    height: 100vh;
-    overflow: hidden;
+    font-style: italic;
+    gap: 10px;
+    visibility: hidden;
 }
 
 .text {
     background-color: black;
     color: navajowhite;
     padding: 1rem;
+    text-align: center;
 }
 
 .game {
-    max-width: 500px;
-    max-height: 400px;
     background-image: linear-gradient(#fecc4c, #E2A628);
     border-radius: 0.5rem;
-    margin: 30px auto 0 auto;
-    padding: 10px;
     box-sizing: border-box;
+    margin: 30px auto 0 auto;
+    max-height: 400px;
+    max-width: 500px;
+    padding: 10px;
 }
 
 .controls, .stats {
     border: 1px solid black;
+    border-radius: 0.1rem;
     color: black;
     padding: 5px;
-    border-radius: 0.1rem;
+}
+
+.stats {
+    align-items: center;
+    border-bottom: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.controls {
+    border-top: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.monster-stats {
+    background-color: #FF3A32;
+    color: #0F0506;
+    display: none;
+    padding: 5px;
+}
+
+.innerMonster {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
 }
 
 .icon {
     display: none;
-}
-
-.stats {
-    border-bottom: none;
-}
-
-.monster-stats {
-    display: none;
-    border: 1px solid black;
-    padding: 5px;
-    color: #0F0506;
-    background-color: #FF3A32;
 }
 
 .stat {
@@ -81,11 +96,10 @@ header {
 }
 
 button {
-    cursor: pointer;
-    color: black;
-    font-weight: bold;
-    background-color: #FF3A32;
-    background-image: linear-gradient(#FF3A32, rgb(255, 50, 105));
-    border: 3px solid #FF3A32;
+    background: #FF3A32 linear-gradient(#FF3A32, rgb(255, 50, 105));
+    border: 3px solid rgb(255, 50, 105);
     border-radius: 0.2rem;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
 }
