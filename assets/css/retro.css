@@ -6,6 +6,10 @@
     font-display: swap;
 }
 
+* {
+    font-family: 'Tektur', sans-serif;
+}
+
 img {
     width: 100px;
     height: 100px;
@@ -31,7 +35,6 @@ header {
     background-color: #1A0B0C;
     height: 100vh;
     overflow: hidden;
-    font-family: 'Tektur', sans-serif;
 }
 
 .text {
