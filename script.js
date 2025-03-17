@@ -288,9 +288,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 setTimeout(() => {
                     loaderContainer.style.visibility = "hidden";
                     content.style.opacity = "1";
-                }, 500);
-            }, 500);
-        }, 500);
+                }, 400);
+            }, 400);
+        }, 400);
     });
 
     checkbox.addEventListener("change", function() {
@@ -313,8 +313,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 setTimeout(() => {
                     loaderContainer.style.visibility = "hidden";
                     content.style.opacity = "1";
-                }, 500);
-            }, 500);
-        }, 500);
+                }, 400);
+            }, 400);
+        }, 400);
     });
 });
