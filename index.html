@@ -37,8 +37,13 @@
     <link rel="icon" type="image/png" sizes="512x512" href="assets/images/favicon/android-chrome-512x512.png">
     <link rel="manifest" href="assets/images/favicon/site.webmanifest">
 
+    <!-- Preload Styles -->
+    <link rel="preload" href="assets/css/retro.min.css" as="style">
+    <link rel="preload" href="assets/css/modern.min.css" as="style">
+
     <!-- Styles -->
-    <link id="look-style" rel="stylesheet" href="assets/css/retro.min.css" media="print" onload="this.onload=null;this.media='all';">
+    <link id="retro-style" rel="stylesheet" href="assets/css/retro.min.css" media="print" onload="this.onload=null;this.media='all';">
+    <link id="modern-style" rel="stylesheet" href="assets/css/modern.min.css" disabled>
     <style>
         #content {
             display: none;
@@ -58,7 +63,6 @@
         }
 
         .checkbox-wrapper-25 input[type="checkbox"] {
-            /*noinspection CssInvalidFunction*/
             background-image: -webkit-linear-gradient(hsla(0, 0%, 0%, .1), hsla(0, 0%, 100%, .1)),
             -webkit-linear-gradient(left, #f66 50%, #6cf 50%);
             background-size: 100% 100%, 200% 100%;
@@ -98,13 +102,8 @@
         }
     </style>
 </head>
+
 <body>
-
-<div id="loader-container" class="loader-container">
-    <div class="loader"></div>
-</div>
-
-
 <div id="content">
 
     <header>
@@ -121,7 +120,7 @@
 
         <div class="checkbox-wrapper-25">
             <label>
-                <input type="checkbox" aria-label="Toggle dark mode">
+                <input type="checkbox" id="style-toggle" aria-label="Toggle dark mode">
             </label>
         </div>
     </header>
