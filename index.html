@@ -42,8 +42,8 @@
     <link rel="preload" href="assets/css/modern.min.css" as="style">
 
     <!-- Styles -->
-    <link id="retro-style" rel="stylesheet" href="assets/css/retro.min.css" media="print" onload="this.onload=null;this.media='all';">
-    <link id="modern-style" rel="stylesheet" href="assets/css/modern.min.css" disabled>
+    <link id="look-style" rel="stylesheet" href="assets/css/retro.min.css">
+
     <style>
         #content {
             display: none;
@@ -63,6 +63,7 @@
         }
 
         .checkbox-wrapper-25 input[type="checkbox"] {
+            /*noinspection CssInvalidFunction*/
             background-image: -webkit-linear-gradient(hsla(0, 0%, 0%, .1), hsla(0, 0%, 100%, .1)),
             -webkit-linear-gradient(left, #f66 50%, #6cf 50%);
             background-size: 100% 100%, 200% 100%;
@@ -102,8 +103,13 @@
         }
     </style>
 </head>
-
 <body>
+
+<div id="loader-container" class="loader-container">
+    <div class="loader"></div>
+</div>
+
+
 <div id="content">
 
     <header>
@@ -120,7 +126,7 @@
 
         <div class="checkbox-wrapper-25">
             <label>
-                <input type="checkbox" id="style-toggle" aria-label="Toggle dark mode">
+                <input type="checkbox" aria-label="Toggle dark mode">
             </label>
         </div>
     </header>
@@ -172,44 +178,6 @@
 
     </div>
 </div>
-<script>
-    // UI
-    document.addEventListener("DOMContentLoaded", () => {
-        const checkbox = document.querySelector(".checkbox-wrapper-25 input[type='checkbox']");
-        const styleRetro = document.getElementById("retro-style");
-        const styleModern = document.getElementById("modern-style");
-        const content = document.getElementById("content");
-
-        if (localStorage.getItem("look") === "modern") {
-            styleRetro.disabled = true;
-            styleModern.disabled = false;
-            checkbox.checked = true;
-        }
-
-        const transition = (isChecked) => {
-            content.style.opacity = "0";
-
-            setTimeout(() => {
-                styleRetro.disabled = isChecked;
-                styleModern.disabled = !isChecked;
-                localStorage.setItem("look", isChecked ? "modern" : "retro");
-
-                setTimeout(() => {
-                    content.style.opacity = "1";
-                }, 75);
-            }, 75);
-        };
-
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                content.style.display = "block";
-                content.style.opacity = "1";
-            }, 75);
-        });
-
-        checkbox.addEventListener("change", () => transition(checkbox.checked));
-    });
-</script>
 <script src="index.min.js"></script>
 </body>
 </html>
