@@ -25,16 +25,16 @@ document.addEventListener("DOMContentLoaded", () => {
                 setTimeout(() => {
                     loaderContainer.style.visibility = "hidden";
                     content.style.opacity = "1";
-                }, 250);
-            }, 250);
-        }, 250);
+                }, 75);
+            }, 75);
+        }, 75);
     };
 
     // Initial page load
     window.addEventListener('load', () => setTimeout(() => {
         content.style.display = "block";
         transition(checkbox.checked);
-    }, 250));
+    }, 75));
 
     // Theme toggle
     checkbox.addEventListener("change", () => transition(checkbox.checked));
