@@ -1,39 +1,4 @@
-// UI
-document.addEventListener("DOMContentLoaded", () => {
-    const checkbox = document.querySelector(".checkbox-wrapper-25 input[type='checkbox']");
-    const styleRetro = document.getElementById("retro-style");
-    const styleModern = document.getElementById("modern-style");
-    const content = document.getElementById("content");
 
-    if (localStorage.getItem("look") === "modern") {
-        styleRetro.disabled = true;
-        styleModern.disabled = false;
-        checkbox.checked = true;
-    }
-
-    const transition = (isChecked) => {
-        content.style.opacity = "0";
-
-        setTimeout(() => {
-            styleRetro.disabled = isChecked;
-            styleModern.disabled = !isChecked;
-            localStorage.setItem("look", isChecked ? "modern" : "retro");
-
-            setTimeout(() => {
-                content.style.opacity = "1";
-            }, 75);
-        }, 75);
-    };
-
-    window.addEventListener('load', () => {
-        setTimeout(() => {
-            content.style.display = "block";
-            content.style.opacity = "1";
-        }, 75);
-    });
-
-    checkbox.addEventListener("change", () => transition(checkbox.checked));
-});
 
 
 // game logic
