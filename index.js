@@ -1,3 +1,46 @@
+document.addEventListener("DOMContentLoaded", () => {
+    const checkbox = document.querySelector(".checkbox-wrapper-25 input[type='checkbox']");
+    const lookToggle = document.getElementById("look-style");
+    const loaderContainer = document.getElementById("loader-container");
+    const content = document.getElementById("content");
+
+    // Set initial theme from localStorage
+    if (localStorage.getItem("look") === "modern") {
+        lookToggle.href = "./assets/css/modern.min.css";
+        checkbox.checked = true;
+    }
+
+    // Function to handle transitions
+    const transition = (isChecked) => {
+        content.style.opacity = "0";
+        loaderContainer.style.visibility = "visible";
+        loaderContainer.style.opacity = "1";
+
+        setTimeout(() => {
+            lookToggle.href = `./assets/css/${isChecked ? "modern" : "retro"}.min.css`;
+            localStorage.setItem("look", isChecked ? "modern" : "retro");
+
+            setTimeout(() => {
+                loaderContainer.style.opacity = "0";
+                setTimeout(() => {
+                    loaderContainer.style.visibility = "hidden";
+                    content.style.opacity = "1";
+                }, 250);
+            }, 250);
+        }, 250);
+    };
+
+    // Initial page load
+    window.addEventListener('load', () => setTimeout(() => {
+        content.style.display = "block";
+        transition(checkbox.checked);
+    }, 250));
+
+    // Theme toggle
+    checkbox.addEventListener("change", () => transition(checkbox.checked));
+});
+
+// game logic
 let xp = 0;
 let health = 100;
 let gold = 50;
@@ -263,58 +306,3 @@ function pick(guess) {
         }
     }
 }
-
-// UI
-document.addEventListener("DOMContentLoaded", function() {
-    const checkbox = document.querySelector(".checkbox-wrapper-25 input[type='checkbox']");
-    const lookToggle = document.getElementById("look-style");
-    const loaderContainer = document.getElementById("loader-container");
-    const content = document.getElementById("content");
-
-    const savedTheme = localStorage.getItem("look");
-    if (savedTheme === "modern") {
-        lookToggle.href = "./assets/css/modern.css";
-        checkbox.checked = true;
-    }
-
-    window.addEventListener('load', function() {
-        setTimeout(() => {
-            content.style.display = "block";
-            content.style.opacity = "0";
-
-            setTimeout(() => {
-                loaderContainer.style.opacity = "0";
-
-                setTimeout(() => {
-                    loaderContainer.style.visibility = "hidden";
-                    content.style.opacity = "1";
-                }, 400);
-            }, 400);
-        }, 400);
-    });
-
-    checkbox.addEventListener("change", function() {
-        content.style.opacity = "0";
-        loaderContainer.style.visibility = "visible";
-        loaderContainer.style.opacity = "1";
-
-        setTimeout(() => {
-            if (checkbox.checked) {
-                lookToggle.href = "./assets/css/modern.css";
-                localStorage.setItem("look", "modern");
-            } else {
-                lookToggle.href = "./assets/css/retro.css";
-                localStorage.setItem("look", "retro");
-            }
-
-            setTimeout(() => {
-                loaderContainer.style.opacity = "0";
-
-                setTimeout(() => {
-                    loaderContainer.style.visibility = "hidden";
-                    content.style.opacity = "1";
-                }, 400);
-            }, 400);
-        }, 400);
-    });
-});
