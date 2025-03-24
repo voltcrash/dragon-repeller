@@ -13,7 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
         content.style.opacity = "0";
 
         setTimeout(() => {
-            lookToggle.href = `./assets/css/${isChecked ? "modern" : "retro"}.min.css`;
+            document.getElementById("retro-style").disabled = isChecked;
+            document.getElementById("modern-style").disabled = !isChecked;
             localStorage.setItem("look", isChecked ? "modern" : "retro");
 
             setTimeout(() => {
