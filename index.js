@@ -1,44 +1,40 @@
+// UI
 document.addEventListener("DOMContentLoaded", () => {
     const checkbox = document.querySelector(".checkbox-wrapper-25 input[type='checkbox']");
-    const lookToggle = document.getElementById("look-style");
-    const loaderContainer = document.getElementById("loader-container");
+    const styleRetro = document.getElementById("retro-style");
+    const styleModern = document.getElementById("modern-style");
     const content = document.getElementById("content");
 
-    // Set initial theme from localStorage
     if (localStorage.getItem("look") === "modern") {
-        lookToggle.href = "./assets/css/modern.min.css";
+        styleRetro.disabled = true;
+        styleModern.disabled = false;
         checkbox.checked = true;
     }
 
-    // Function to handle transitions
     const transition = (isChecked) => {
         content.style.opacity = "0";
-        loaderContainer.style.visibility = "visible";
-        loaderContainer.style.opacity = "1";
 
         setTimeout(() => {
-            lookToggle.href = `./assets/css/${isChecked ? "modern" : "retro"}.min.css`;
+            styleRetro.disabled = isChecked;
+            styleModern.disabled = !isChecked;
             localStorage.setItem("look", isChecked ? "modern" : "retro");
 
             setTimeout(() => {
-                loaderContainer.style.opacity = "0";
-                setTimeout(() => {
-                    loaderContainer.style.visibility = "hidden";
-                    content.style.opacity = "1";
-                }, 75);
+                content.style.opacity = "1";
             }, 75);
         }, 75);
     };
 
-    // Initial page load
-    window.addEventListener('load', () => setTimeout(() => {
-        content.style.display = "block";
-        transition(checkbox.checked);
-    }, 75));
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            content.style.display = "block";
+            content.style.opacity = "1";
+        }, 75);
+    });
 
-    // Theme toggle
     checkbox.addEventListener("change", () => transition(checkbox.checked));
 });
+
 
 // game logic
 let xp = 0;
