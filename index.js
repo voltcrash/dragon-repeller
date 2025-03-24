@@ -1,14 +1,13 @@
+// UI
 document.addEventListener("DOMContentLoaded", () => {
     const checkbox = document.querySelector(".checkbox-wrapper-25 input[type='checkbox']");
     const lookToggle = document.getElementById("look-style");
     const content = document.getElementById("content");
 
-    // Set initial theme from localStorage
     if (localStorage.getItem("look") === "modern") {
         checkbox.checked = true;
     }
 
-    // Function to handle transitions
     const transition = (isChecked) => {
         content.style.opacity = "0";
 
@@ -22,17 +21,15 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 75);
     };
 
-    // Initial page load
     window.addEventListener('load', () => setTimeout(() => {
         content.style.display = "block";
         transition(checkbox.checked);
     }, 75));
 
-    // Theme toggle
     checkbox.addEventListener("change", () => transition(checkbox.checked));
 });
 
-// game logic
+// game
 let xp = 0;
 let health = 100;
 let gold = 50;
