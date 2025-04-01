@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://dragon-repeller.pages.dev/sitemap.xml
+Sitemap: https://dragon-repeller.vercel.app/sitemap.xml
