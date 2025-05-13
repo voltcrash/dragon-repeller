@@ -1,7 +1,7 @@
 <div align="center">  
 
 <p align="center">
-    <img src="https://repeller-dragon.vercel.app/assets/images/thumbnails/transparent.png" width="600">
+    <img src="assets/images/thumbnails/transparent.png" width="600">
 </p>
 
 <a href="https://repeller-dragon.vercel.app"><em>A simple text-based RPG</em></a>
@@ -27,9 +27,9 @@ Your task is to defeat the dragon that is preventing people from leaving the tow
 
 ## Modes 🎮
 ### Modern Mode
-<img src="https://repeller-dragon.vercel.app/assets/images/thumbnails/modern.png">
+<img src="assets/images/thumbnails/modern.png">
 
 ### Retro Mode
-<img src="https://repeller-dragon.vercel.app/assets/images/thumbnails/retro.png">
+<img src="assets/images/thumbnails/retro.png">
 
 <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/learn-basic-javascript-by-building-a-role-playing-game/step-1"><em>Inspired by freeCodeCamp's JavaScript Algorithms and Data Structures course</em></a>
